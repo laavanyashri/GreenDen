@@ -12,7 +12,7 @@
 
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:hidden" fill="none" viewBox="0 0 24 24"
+        <svg  id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:hidden" fill="none" viewBox="0 0 24 24"
             stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -30,17 +30,38 @@
             </li>
         </ul>
     </nav>
+   <!--sidenabvar-->
 
+   <section id="sidenav" class="bg-green-100 fixed  z-20 right-0 top-0 transition-all duration-1000" style="width:50%;height:100vh;right:-50%;">
+    <div class="text-right p-5">
+        <p id="close-nav" class="inline cursor pointer">
+            X
+        </p>
+    </div>
+    <ul class="flex flex-col items-center gap-10  text-gray-500  ">
+        <li>
+            <a class="hover:underline hover:text-black" href="#">Home</a>
+        </li>
+        <li>
+            <a href="product.html" class="hover:underline hover:text-black">Products</a>
+        </li>
+        <li>
+            <a href="contact.html" class="hover:underline hover:text-black">Contact</a>
+        </li>
+    </ul>
+</section>
     <!--Products-->
-    <section class="text-center">
+    <!-- <section class="text-center">
        
         <h1 class="text-bold text-3xl text-center">Our Products</h1>
         <input type="text" class="border border-black  p-3 mt-3 "  placeholder="Please search" style="width:60%;">
-    </section>
+    </section> -->
 
     <!--images-->
 <section class="p-4 text-center">
-    <section class="grid grid-cols-2  mt-10 md:grid-cols-4 ">
+    <h1 class="text-bold text-3xl text-center">Our Products</h1>
+    <input id="search" type="text" class="border border-black  p-3 mt-3 "  placeholder="Please search" style="width:60%;">
+    <section id="product-container" class="grid grid-cols-2  mt-10 md:grid-cols-4 ">
         <div>
             <img src="./images/products/product1.jpg" alt="" class=" inline hover:shadow-xl transform hover:translate-y-2">
             <p>Sunflower Plant</p>
@@ -127,5 +148,6 @@
         </ul>
     </div>
     </section>
+    <script src="product.js"></script>
 </body>
 </html>
